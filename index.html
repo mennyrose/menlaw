@@ -11,8 +11,8 @@
     
     <style>
         :root {
-            --primary-color: #0B2B45; /* כחול-צי כהה */
-            --secondary-color: #5D9CDB; /* תכלת בהיר */
+            --primary-color: #0B2B45; /* כחול-צי כהה - מותאם ללוגו */
+            --secondary-color: #5D9CDB; /* תכלת בהיר - מותאם ללוגו */
             --accent-light: #F0F6FA; /* רקע בהיר */
             --text-color: #333333;
             --white: #ffffff;
@@ -54,7 +54,7 @@
             top: 0;
         }
 
-        /* Header Styles - מעודכן לגודל לוגו גדול יותר */
+        /* Header Styles */
         header {
             background-color: var(--white);
             box-shadow: 0 2px 15px rgba(11, 43, 69, 0.08);
@@ -62,7 +62,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            height: 110px; /* הוגדל מ-90px ל-110px */
+            height: 110px;
             transition: height 0.3s;
         }
 
@@ -80,7 +80,7 @@
         }
 
         .logo-img {
-            height: 85px; /* הוגדל מ-65px ל-85px כדי להתאים לגודל הטקסט בתפריט */
+            height: 85px;
             width: auto;
             transition: height 0.3s;
         }
@@ -89,7 +89,7 @@
             margin-right: 30px;
             font-weight: 500;
             color: var(--primary-color);
-            font-size: 1.15rem; /* הגדלה קלה גם של הפונט בתפריט */
+            font-size: 1.15rem;
             transition: color 0.3s;
         }
 
@@ -126,7 +126,7 @@
 
         /* Hero Section */
         .hero {
-            margin-top: 110px; /* הותאם לגובה החדש של ההדר */
+            margin-top: 110px;
             background: linear-gradient(rgba(11, 43, 69, 0.9), rgba(28, 78, 117, 0.85)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
@@ -466,15 +466,15 @@
         
         /* Mobile Responsive Adjustments */
         @media (max-width: 768px) {
-            header { height: 90px; } /* header קטן יותר במובייל */
-            .logo-img { height: 60px; } /* לוגו קטן יותר במובייל */
+            header { height: 90px; }
+            .logo-img { height: 60px; }
             
             .hero { margin-top: 90px; }
             .hero h1 { font-size: 2.2rem; }
             .hero p { font-size: 1.3rem; }
             
             .about-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; } /* הסתרת תפריט רגיל במובייל */
+            .nav-links { display: none; }
             .about-image { height: 300px; }
             
             .contact-info h2 { font-size: 2.2rem; }
@@ -559,10 +559,13 @@
                         <h3>סכסוכי שכנים</h3>
                         <p>ניהול וייצוג משפטי בסכסוכים בין שכנים, נציגויות בתים משותפים ומחלוקות קנייניות.</p>
                     </article>
+                    <article class="service-card">
+                        <h3>מיסוי מוניציפאלי</h3>
+                        <p>ייעוץ וליווי בענייני ארנונה ומיסוי רשויות מקומיות, הפחתת חיובים וייצוג מול הרשויות.</p>
+                    </article>
                 </div>
             </div>
         </section>
-
         <section id="contact" class="contact" aria-labelledby="contact-title">
             <div class="container contact-container">
                 <div class="contact-info">
@@ -574,29 +577,32 @@
                     <div class="info-item"><span>✉️</span> <a href="mailto:m@menlaw.net">m@menlaw.net</a></div>
                 </div>
                 
-             <form action="https://formspree.io/f/mkgdgnle" method="POST">
-    <div class="form-group">
-        <label for="name" class="visually-hidden">שם מלא</label>
-        <input type="text" id="name" name="name" placeholder="שם מלא" required>
-    </div>
-    <div class="form-group">
-        <label for="phone" class="visually-hidden">טלפון</label>
-        <input type="tel" id="phone" name="phone" placeholder="טלפון" required>
-    </div>
-    <div class="form-group">
-        <label for="email" class="visually-hidden">דואר אלקטרוני</label>
-        <input type="email" id="email" name="email" placeholder="דואר אלקטרוני">
-    </div>
-    <div class="form-group">
-        <label for="message" class="visually-hidden">כיצד אוכל לעזור?</label>
-        <textarea id="message" name="message" rows="4" placeholder="כיצד אוכל לעזור?"></textarea>
-    </div>
-    <button type="submit" class="submit-btn">שליחת פנייה</button>
-</form>
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/mkgdgnle" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="visually-hidden">שם מלא</label>
+                            <input type="text" id="name" name="name" placeholder="שם מלא" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="visually-hidden">טלפון</label>
+                            <input type="tel" id="phone" name="phone" placeholder="טלפון" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="visually-hidden">דואר אלקטרוני</label>
+                            <input type="email" id="email" name="email" placeholder="דואר אלקטרוני">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="visually-hidden">כיצד אוכל לעזור?</label>
+                            <textarea id="message" name="message" rows="4" placeholder="כיצד אוכל לעזור?"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">שליחת פנייה</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
-<footer>
+    
+    <footer>
         <p>© 2025 עו"ד מני רוזנצויג - כל הזכויות שמורות</p>
         <p style="margin-top: 10px;">
             <a href="#accessibility-statement">הצהרת נגישות</a> | 
@@ -674,4 +680,3 @@
 
 </body>
 </html>
-
