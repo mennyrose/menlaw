@@ -171,21 +171,22 @@
 
         .about-image {
             width: 100%;
-            height: auto; /* שינוי: גובה אוטומטי לפי התמונה */
-            min-height: 300px; /* גובה מינימלי למקרה שהתמונה קטנה מדי */
-            background-color: #f0f0f0;
+            height: 550px; /* גובה קבוע וגדול למסגרת */
+            background-color: #f8f9fa; /* רקע עדין לשוליים שייווצרו */
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 10px 10px 0px var(--secondary-color);
-            display: flex; /* מסייע במירכוז */
+            display: flex;
             align-items: center;
             justify-content: center;
+            border: 1px solid #eee; /* מסגרת עדינה */
         }
         
         .about-image img {
             width: 100%;
-            height: auto; /* שינוי: שומר על פרופורציות מקוריות */
-            display: block; /* מונע רווחים מיותרים בתחתית */
+            height: 100%;
+            object-fit: contain; /* מכניס את כל התמונה למסגרת בלי לחתוך */
+            object-position: center;
         }
 
         .about-text h2 {
@@ -479,7 +480,8 @@
             
             .about-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
-            .about-image { height: auto; min-height: 300px; }
+            /* במובייל גובה קבוע קטן יותר אך מספק */
+            .about-image { height: 400px; min-height: 0; max-height: none; }
             
             .contact-info h2 { font-size: 2.2rem; }
             .modal-content { padding: 25px 20px; }
@@ -528,7 +530,7 @@
                     <p>הניסיון הזה מאפשר לי להעניק לכם ערך מוסף אמיתי: אני יודע לנהל את מערכות היחסים המורכבות שבין מוכרים, רוכשים ושכנים, לצפות אתגרים מראש, ולדאוג שהאינטרס שלכם נשמר במלואו.</p>
                 </div>
                 <div class="about-image">
-                    <!-- וודא ששינית את שם קובץ התמונה החדשה שלך ל-profile.jpg -->
+                    <!-- וודא ששם הקובץ של התמונה הוא profile.jpg והוא נמצא באותה תיקייה -->
                     <img src="profile.jpg" alt="תמונת פרופיל - עו'ד מני רוזנצויג במשרד">
                 </div>
             </div>
