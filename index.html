@@ -11,8 +11,8 @@
     
     <style>
         :root {
-            --primary-color: #0B2B45; /* כחול-צי כהה - מותאם ללוגו */
-            --secondary-color: #5D9CDB; /* תכלת בהיר - מותאם ללוגו */
+            --primary-color: #0B2B45; /* כחול-צי כהה */
+            --secondary-color: #5D9CDB; /* תכלת בהיר */
             --accent-light: #F0F6FA; /* רקע בהיר */
             --text-color: #333333;
             --white: #ffffff;
@@ -171,17 +171,21 @@
 
         .about-image {
             width: 100%;
-            height: 450px;
+            height: auto; /* שינוי: גובה אוטומטי לפי התמונה */
+            min-height: 300px; /* גובה מינימלי למקרה שהתמונה קטנה מדי */
             background-color: #f0f0f0;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 10px 10px 0px var(--secondary-color);
+            display: flex; /* מסייע במירכוז */
+            align-items: center;
+            justify-content: center;
         }
         
         .about-image img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto; /* שינוי: שומר על פרופורציות מקוריות */
+            display: block; /* מונע רווחים מיותרים בתחתית */
         }
 
         .about-text h2 {
@@ -475,7 +479,7 @@
             
             .about-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
-            .about-image { height: 300px; }
+            .about-image { height: auto; min-height: 300px; }
             
             .contact-info h2 { font-size: 2.2rem; }
             .modal-content { padding: 25px 20px; }
@@ -488,6 +492,7 @@
     <header role="banner">
         <div class="container navbar">
             <a href="#" class="logo-link" aria-label="דף הבית - עו'ד מני רוזנצויג">
+                <!-- וודא שקובץ הלוגו בשם logo.png נמצא בתיקייה -->
                 <img src="logo.png" alt="לוגו MENNY - מני רוזנצויג עורך דין" class="logo-img">
             </a>
             
@@ -523,6 +528,7 @@
                     <p>הניסיון הזה מאפשר לי להעניק לכם ערך מוסף אמיתי: אני יודע לנהל את מערכות היחסים המורכבות שבין מוכרים, רוכשים ושכנים, לצפות אתגרים מראש, ולדאוג שהאינטרס שלכם נשמר במלואו.</p>
                 </div>
                 <div class="about-image">
+                    <!-- וודא ששינית את שם קובץ התמונה החדשה שלך ל-profile.jpg -->
                     <img src="profile.jpg" alt="תמונת פרופיל - עו'ד מני רוזנצויג במשרד">
                 </div>
             </div>
@@ -566,6 +572,7 @@
                 </div>
             </div>
         </section>
+
         <section id="contact" class="contact" aria-labelledby="contact-title">
             <div class="container contact-container">
                 <div class="contact-info">
