@@ -172,7 +172,10 @@
 
         .about-image {
             width: 100%;
-            height: 550px; /* גובה קבוע וגדול למסגרת */
+            height: auto; /* גובה לפי יחס התמונה */
+            aspect-ratio: 4 / 5;
+            max-width: 480px;
+            margin: 0 auto;
             background-color: #f8f9fa; /* רקע עדין לשוליים שייווצרו */
             border-radius: 8px;
             overflow: hidden;
@@ -186,8 +189,8 @@
         .about-image img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* מכניס את כל התמונה למסגרת בלי לחתוך */
-            object-position: center;
+            object-fit: cover; /* התמונה ממלאת את המסגרת */
+            object-position: center top;
         }
 
         .about-text h2 {
@@ -482,7 +485,7 @@
             .about-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
             /* במובייל גובה קבוע קטן יותר אך מספק */
-            .about-image { height: 400px; min-height: 0; max-height: none; }
+            .about-image { height: auto; max-width: 420px; min-height: 0; max-height: none; }
             
             .contact-info h2 { font-size: 2.2rem; }
             .modal-content { padding: 25px 20px; }
